@@ -1,33 +1,18 @@
 package ru.netology
 
+import ru.netology.attachment.*
+
+
 object WallServise {
     private var posts = emptyArray<Post>()
     private var currentID = 0
 
-    fun main() {
-        WallServise.add(Post(ownerId = 2, fromId = 3, createdBy = 5, date = 25, text = "text", replyOwnerId = 2,
-            replyPostId = 24, friendsOnly = true, comments = null, copyright = null,
-            likes = null, reposts = null, postType = "postType", signerId = 6, canPin = true,
-            canDelete = true, canEdit = true, isPinned = true, markedAsAds = true, isFavorite = true,
-            donut = null, postponedId = "postponedId", postSource = null, geo = null, copyHistory = null))
 
-        WallServise.add(Post(ownerId = 2, fromId = 3, createdBy = 5, date = 25, text = "text", replyOwnerId = 2,
-            replyPostId = 24, friendsOnly = true, comments = null, copyright = null,
-            likes = null, reposts = null, postType = "postType", signerId = 6, canPin = true,
-            canDelete = true, canEdit = true, isPinned = true, markedAsAds = true, isFavorite = true,
-            donut = null, postponedId = "postponedId", postSource = null, geo = null, copyHistory = null))
-
-        WallServise.add(Post(ownerId = 2, fromId = 3, createdBy = 5, date = 25, text = "text", replyOwnerId = 2,
-            replyPostId = 24, friendsOnly = true, comments = null, copyright = null,
-            likes = null, reposts = null, postType = "postType", signerId = 6, canPin = true,
-            canDelete = true, canEdit = true, isPinned = true, markedAsAds = true, isFavorite = true,
-            donut = null, postponedId = "postponedId", postSource = null, geo = null, copyHistory = null))
-    }
 
     fun add(post: Post): Post {
         currentID++
-        val post = post.copy(id = currentID)
-        posts += post
+        val post1 = post.copy(id = currentID)
+        posts += post1
         return posts.last()
     }
 
